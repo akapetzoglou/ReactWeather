@@ -164,3 +164,6 @@
             Add a new file called .gitignore. Inside that file just specify the files you don't want to add on git. 
             Example: "node_modules/" 
             the '/' specifies that we are talking about a folder.
+        Git add:
+            Add a specific file: git add <filename>
+            Add every file except the ingored ones: git add .
