@@ -167,3 +167,6 @@
         Git add:
             Add a specific file: git add <filename>
             Add every file except the ingored ones: git add .
+            With the a flag your modified files get commited as well: 
+            git commit -a -m 'message'
+            For new files we need to add them.
