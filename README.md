@@ -164,9 +164,15 @@
             Add a new file called .gitignore. Inside that file just specify the files you don't want to add on git. 
             Example: "node_modules/" 
             the '/' specifies that we are talking about a folder.
+
         Git add:
             Add a specific file: git add <filename>
             Add every file except the ingored ones: git add .
             With the a flag your modified files get commited as well: 
             git commit -a -m 'message'
             For new files we need to add them.
+
+        Pushing to Github:
+            Github--> New repository
+                exit
+                
