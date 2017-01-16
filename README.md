@@ -248,3 +248,5 @@
 #Styling Navigation
     Menu + Top Bar => 
         All we need to do here and for styling in general using Foundation, is to go the     http://foundation.zurb.com/sites/docs/ , find what we want and use the same classNames and structures as suggested. So for this one we are going to find the "Menu" and the "Top Bar" components in the foundation page and use them.
+#Styling Examples 
+    Grid
