@@ -218,7 +218,6 @@
         Units rems over pixels
         pricing tables
         tors
-    http://foundation.zurb.com/sites/docs/
 
 #Installing Foundation
     $npm install css-loader@0.23.1 script-loader@0.6.1 style-loader@0.13.0 jquery@2.2.1 foundation-sites@6.2.0 --save-dev
@@ -246,3 +245,6 @@
         require('style!css!foundation-sites/dist/foundation.min.css');
         $(document).foundation();
 
+#Styling Navigation
+    Menu + Top Bar => 
+        All we need to do here and for styling in general using Foundation, is to go the     http://foundation.zurb.com/sites/docs/ , find what we want and use the same classNames and structures as suggested. So for this one we are going to find the "Menu" and the "Top Bar" components in the foundation page and use them.
