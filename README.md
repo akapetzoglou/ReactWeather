@@ -181,6 +181,24 @@
         Deploying the WebApp on Heroku: 
             Go to Heroku and create a new account
             Install the heroku toolbelt by going to: https://devcenter.heroku.com/articles/heroku-cli
+            Update the 'server.js' file:
+                var express = require('express');
+                // Create our app
+                var app = express();
+                //Usually 'const' are named with CAPS
+                const PORT = process.env.PORT || 3000;
+                app.use(function (req, res, next) {
+                    if (req.headers['x-forwarded-proto'] === 'https') {
+                        res.redirect('http://' + req.hostname + req.url);
+                    } else {
+                        next();
+                    }
+                });
+                app.use(express.static('public'));
+                app.listen(PORT, function () {
+                  console.log('Express server is up on port ' + PORT);
+                });
+
             Browse into the app folder from the command line and run :
                 heroku login // Login with your Heroku credentials
                 heroku create // Create the heroku remote for your app
@@ -194,4 +212,37 @@
             $heroku login
             $git push heroku master
             $heroku open
-                
+
+#Design (Foundation css framework)
+    Foundation vs Bootstrap
+        Units rems over pixels
+        pricing tables
+        tors
+    http://foundation.zurb.com/sites/docs/
+
+#Installing Foundation
+    $npm install css-loader@0.23.1 script-loader@0.6.1 style-loader@0.13.0 jquery@2.2.1 foundation-sites@6.2.0 --save-dev
+
+    Update webpack.config.js : 
+        var webpack = require('webpack');
+        module.exports = {
+          entry: [
+            'script!jquery/dist/jquery.min.js',
+            'script!foundation-sites/dist/foundation.min.js',
+            './app/app.jsx'
+            ],
+          externals: {
+            jquery: 'jQuery'
+          },
+          plugins: [
+            new webpack.ProvidePlugin({
+              '$': 'jquery',
+              'jQuery': 'jquery'
+            })
+          ]
+
+    Inside 'app.jsx' import the new css, like so:
+        // Load Foundation
+        require('style!css!foundation-sites/dist/foundation.min.css');
+        $(document).foundation();
+
