@@ -252,3 +252,17 @@
     Grid
     Button
     Reveal
+
+#Sass-Scss
+    $npm install sass-loader@v3.1.2 node-sass@3.4.2 --save-dev
+
+    Change the name from the /styles/app.css to /styles/app.scss
+    Inside the app.jsx =>
+            // App css
+            require('style!css!applicationStyles')
+            =>
+            // App css
+            require('style!css!sass!applicationStyles')
+
+
+

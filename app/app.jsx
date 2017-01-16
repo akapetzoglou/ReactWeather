@@ -7,7 +7,7 @@ var About = require('About');
 var Examples =require('Examples');
 
 // App css
-require('style!css!applicationStyles')
+require('style!css!sass!applicationStyles')
 
 // Load Foundation
 require('style!css!foundation-sites/dist/foundation.min.css');
