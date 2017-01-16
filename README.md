@@ -251,3 +251,4 @@
 #Styling Examples, About, Get Weather 
     Grid
     Button
+    Reveal
