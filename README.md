@@ -169,10 +169,29 @@
             Add a specific file: git add <filename>
             Add every file except the ingored ones: git add .
             With the a flag your modified files get commited as well: 
-            git commit -a -m 'message'
+            git commit -am 'message'
             For new files we need to add them.
 
         Pushing to Github:
             Github--> New repository
-                exit
+                $git status //Shows the files modified and not commited , etc
+                $git commit -am '' // Adds the files that are modified but not commited and also adds a message for the new commit
+                $git push
+
+        Deploying the WebApp on Heroku: 
+            Go to Heroku and create a new account
+            Install the heroku toolbelt by going to: https://devcenter.heroku.com/articles/heroku-cli
+            Browse into the app folder from the command line and run :
+                heroku login // Login with your Heroku credentials
+                heroku create // Create the heroku remote for your app
+                git push heroku master // Push to the heroku repo on master
+                heroku open// open the heroku link for your app
+#Workflow
+    Scenario: Modified a component.
+        If we run '$git status' after making some changes in a component, we are going to see only one the file we made the changes in. In order to proceed we need to run '$webpack', so that the 'bundle.js' file is updated with our changes. After that we follow the same procedure: 
+            $git commit -am ''
+            $git push // ||git push orgin master. This way we are also pushing to our github repo
+            $heroku login
+            $git push heroku master
+            $heroku open
                 
