@@ -264,5 +264,5 @@
             // App css
             require('style!css!sass!applicationStyles')
 
-
+#React doesn't work well with third-party apps/plug-ins that are manipulating the dom. (Example: Foundation, Bootstrap, etc)
 
